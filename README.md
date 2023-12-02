@@ -55,7 +55,7 @@ We extend our sincere appreciation to the dedicated team members— Zouhair and 
 
 ## Contact Information
 
-For inquiries or feedback, please contact [Your Contact Email].
+For inquiries or feedback, please contact us.
 
 ---
 *Thank you for being a part of the ALX Photography Platform journey.*
