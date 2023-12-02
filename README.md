@@ -21,6 +21,7 @@ So, The Portfolio Project landing page is a webpage that presents information ab
 3.Advanced Content Management: Implementation of a sophisticated content management system (CMS) enabling clients to easily update their online portfolio, adding and modifying content without requiring extensive technical skills.
 4.Social Sharing Features: Integration of social media sharing features to amplify the visibility of artworks, thereby fostering organic promotion.
 5.Mobile Optimization: Development of a responsive website, ensuring a consistent and aesthetic experience across a variety of devices, including smartphones and tablets.
+6.Performance and Speed: Emphasis on optimizing site performance to ensure fast loading times, providing a smooth user experience.
 ### 1. Image Gallery
 
 Discover a meticulously curated collection of captivating photographs, categorized for easy exploration. From landscapes to portraits, our image gallery showcases the diverse beauty of visual storytelling.
