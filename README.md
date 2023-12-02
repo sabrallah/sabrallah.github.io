@@ -1,4 +1,4 @@
-# ALX Photography Platform
+# ALX Photography Platform : Project Landing Page
 
 ## Introduction
 
