@@ -18,7 +18,7 @@ So, The Portfolio Project landing page is a webpage that presents information ab
 
 1.Interactive Photo Gallery: Integration of an immersive photo gallery allowing visitors to easily navigate through artworks, providing a captivating visual experience.
 2.Intuitive User Interface: Design of a user-friendly interface, emphasizing aesthetics while ensuring intuitive navigation for users.
-3.
+3.Advanced Content Management: Implementation of a sophisticated content management system (CMS) enabling clients to easily update their online portfolio, adding and modifying content without requiring extensive technical skills.
 ### 1. Image Gallery
 
 Discover a meticulously curated collection of captivating photographs, categorized for easy exploration. From landscapes to portraits, our image gallery showcases the diverse beauty of visual storytelling.
