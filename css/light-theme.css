@@ -1,0 +1,463 @@
+/* =======================================================
+*
+* 	Thème Lumineux pour Tasty Restaurant
+*   Transformation du thème sombre en thème clair
+*
+* ======================================================= */
+
+/* Corps principal - fond blanc lumineux */
+body {
+  color: #333 !important;
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Navigation */
+.fh5co-nav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fh5co-nav #fh5co-logo {
+  color: #333 !important;
+}
+
+.fh5co-nav a {
+  color: #333 !important;
+}
+
+.fh5co-nav a:hover {
+  color: #ea272d !important;
+}
+
+/* Menu principal */
+#fh5co-header {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Titres et textes */
+h1, h2, h3, h4, h5, h6 {
+  color: #333 !important;
+}
+
+p, .lead {
+  color: #666 !important;
+}
+
+/* Sections principales */
+.fh5co-hero, 
+#fh5co-about, 
+#fh5co-featured-menu, 
+#fh5co-counter, 
+#fh5co-testimonial, 
+#fh5co-subscribe,
+#fh5co-contact,
+.fh5co-section {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Sections alternées avec fond très clair */
+#fh5co-about,
+#fh5co-counter,
+#fh5co-subscribe {
+  background: #f8f9fa !important;
+}
+
+/* Hero section avec dégradé lumineux */
+.fh5co-hero {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+}
+
+.fh5co-hero .fh5co-overlay {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.fh5co-hero .fh5co-hero-wrap .fh5co-hero-intro h2 {
+  color: #333 !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.fh5co-hero .fh5co-hero-wrap .fh5co-hero-intro p {
+  color: #666 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Boutons */
+.btn-primary {
+  background: #ea272d !important;
+  border-color: #ea272d !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover {
+  background: #d41e23 !important;
+  border-color: #d41e23 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(234, 39, 45, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid #ea272d !important;
+  color: #ea272d !important;
+  background: transparent !important;
+}
+
+.btn-outline:hover {
+  background: #ea272d !important;
+  color: #ffffff !important;
+}
+
+/* Menu items */
+.fh5co-food-menu {
+  background: #ffffff !important;
+}
+
+.fh5co-food-menu h2 {
+  color: #333 !important;
+}
+
+.fh5co-food-menu .fh5co-food-desc {
+  color: #666 !important;
+}
+
+.fh5co-food-menu .fh5co-food-desc h3 {
+  color: #333 !important;
+}
+
+.fh5co-food-menu .fh5co-food-desc .fh5co-price {
+  color: #ea272d !important;
+}
+
+/* Témoignages */
+.fh5co-testimonial {
+  background: #f8f9fa !important;
+}
+
+.fh5co-testimonial .testimony {
+  color: #666 !important;
+}
+
+.fh5co-testimonial .testimony h3 {
+  color: #333 !important;
+}
+
+/* Footer */
+#fh5co-footer {
+  background: #333 !important;
+  color: #ffffff !important;
+}
+
+#fh5co-footer h3 {
+  color: #ffffff !important;
+}
+
+#fh5co-footer p,
+#fh5co-footer ul li {
+  color: #cccccc !important;
+}
+
+#fh5co-footer a {
+  color: #ea272d !important;
+}
+
+#fh5co-footer a:hover {
+  color: #ffffff !important;
+}
+
+/* Cartes et conteneurs */
+.fh5co-feature {
+  background: #ffffff !important;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.fh5co-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Galerie */
+.fh5co-gallery {
+  background: #ffffff !important;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulaires */
+.form-control {
+  background: #ffffff !important;
+  border: 2px solid #e9ecef !important;
+  color: #333 !important;
+}
+
+.form-control:focus {
+  border-color: #ea272d !important;
+  box-shadow: 0 0 0 0.2rem rgba(234, 39, 45, 0.25) !important;
+}
+
+/* Contenu spécial */
+.fh5co-intro {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+}
+
+/* Animations et effets */
+.fh5co-animate {
+  transition: all 0.3s ease;
+}
+
+/* Navigation mobile */
+.fh5co-nav-toggle {
+  color: #333 !important;
+}
+
+.fh5co-nav-toggle:hover {
+  color: #ea272d !important;
+}
+
+/* Menu mobile */
+.fh5co-nav .navbar-nav li a {
+  color: #333 !important;
+}
+
+.fh5co-nav .navbar-nav li a:hover {
+  color: #ea272d !important;
+}
+
+/* Compteurs et statistiques */
+.fh5co-counter {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+}
+
+.fh5co-counter .fh5co-counter-number {
+  color: #ea272d !important;
+}
+
+.fh5co-counter .fh5co-counter-label {
+  color: #333 !important;
+}
+
+/* Sections de contact */
+.fh5co-contact-info {
+  background: #ffffff !important;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Améliorations visuelles */
+.fh5co-section {
+  border-top: 1px solid #e9ecef;
+}
+
+/* Bordures et séparateurs */
+.fh5co-border {
+  border-color: #e9ecef !important;
+}
+
+/* Images avec coins arrondis */
+img {
+  border-radius: 8px;
+}
+
+/* Overlay pour les images */
+.fh5co-overlay {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Animation au scroll */
+.animate-box {
+  transition: all 0.6s ease;
+}
+
+/* Améliorations supplémentaires pour un thème ultra-lumineux */
+
+/* Hero section avec un arrière-plan plus lumineux */
+.fh5co-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%) !important;
+}
+
+.fh5co-hero .fh5co-overlay {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Navigation encore plus claire */
+.fh5co-nav {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 1px solid rgba(234, 39, 45, 0.1);
+}
+
+/* Sections avec des arrière-plans variés et lumineux */
+#fh5co-about {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+}
+
+#fh5co-featured-menu {
+  background: #ffffff !important;
+}
+
+#fh5co-counter {
+  background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%) !important;
+}
+
+#fh5co-testimonial {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+}
+
+#fh5co-subscribe {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+}
+
+/* Amélioration des contrastes de texte */
+.fh5co-hero .fh5co-hero-wrap .fh5co-hero-intro h2 {
+  color: #222 !important;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.fh5co-hero .fh5co-hero-wrap .fh5co-hero-intro p {
+  color: #555 !important;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Amélioration des cartes et conteneurs */
+.fh5co-feature {
+  background: #ffffff !important;
+  border: 1px solid #e9ecef;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.fh5co-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(234, 39, 45, 0.1);
+  border-color: rgba(234, 39, 45, 0.2);
+}
+
+/* Menu items avec un style plus lumineux */
+.fh5co-food-menu .fh5co-food-desc {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+/* Témoignages avec style lumineux */
+.fh5co-testimonial .testimony {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 15px;
+  padding: 30px;
+  border-left: 4px solid #ea272d;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Amélioration des liens */
+a {
+  color: #ea272d !important;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #d41e23 !important;
+  text-decoration: none;
+}
+
+/* Amélioration des titres de section */
+.fh5co-section h2 {
+  color: #333 !important;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+}
+
+.fh5co-section h3 {
+  color: #444 !important;
+  font-weight: 500;
+}
+
+/* Amélioration du footer pour contraster avec le thème lumineux */
+#fh5co-footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+  border-top: 3px solid #ea272d;
+  color: #ecf0f1 !important;
+}
+
+#fh5co-footer h3 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+#fh5co-footer p,
+#fh5co-footer ul li {
+  color: #bdc3c7 !important;
+}
+
+/* Galerie avec style lumineux */
+.gallery-item {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact section */
+.fh5co-contact-info {
+  background: #ffffff !important;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+}
+
+/* Formulaires améliorés */
+.form-control {
+  background: #ffffff !important;
+  border: 2px solid #e9ecef !important;
+  border-radius: 8px;
+  color: #333 !important;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ea272d !important;
+  box-shadow: 0 0 0 0.2rem rgba(234, 39, 45, 0.15) !important;
+  background: #ffffff !important;
+}
+
+/* Améliorations responsives */
+@media (max-width: 768px) {
+  .fh5co-hero .fh5co-hero-wrap .fh5co-hero-intro h2 {
+    font-size: 2.5em;
+  }
+  
+  .fh5co-feature {
+    margin-bottom: 2em;
+  }
+  
+  .fh5co-food-menu .fh5co-food-desc {
+    margin: 15px 0;
+    padding: 15px;
+  }
+}

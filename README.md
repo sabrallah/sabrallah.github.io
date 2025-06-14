@@ -7,7 +7,8 @@ A modern, responsive restaurant website showcasing exceptional dining experience
 ### 🎨 Design & UX
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **Modern UI**: Clean, elegant design with smooth animations
-- **Dark Theme**: Sophisticated dark color scheme with red accents
+- **Light Theme**: Bright, welcoming design with clean white backgrounds and vibrant accents
+- **Theme Toggle**: Switch between light and dark themes with the toggle script
 - **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
 
 ### 🚀 Performance
@@ -41,6 +42,7 @@ sabrallah.github.io/
 ├── sw.js                   # Service worker
 ├── css/
 │   ├── style.css           # Main styles
+│   ├── light-theme.css     # Light theme override
 │   ├── custom-improvements.css # Enhanced styles
 │   ├── bootstrap.css       # Bootstrap framework
 │   ├── animate.css         # Animation library
@@ -101,11 +103,19 @@ sabrallah.github.io/
    cd sabrallah.github.io
    ```
 
-2. **Open in browser**
-   - Open `index.html` in your preferred web browser
-   - Or serve using a local web server for best experience
+2. **Start the development server**
+   ```bash
+   ./start-server.sh
+   ```
+   This will start a local server on `http://localhost:8000`
 
-3. **For development**
+3. **Switch themes** (optional)
+   ```bash
+   ./toggle-theme.sh
+   ```
+   Choose between light theme (default) and dark theme
+
+4. **For manual development**
    ```bash
    # Using Python 3
    python -m http.server 8000
@@ -116,6 +126,34 @@ sabrallah.github.io/
    # Using Node.js (with http-server)
    npx http-server
    ```
+
+## 🛠️ Utility Scripts
+
+The project includes several utility scripts to help with development and maintenance:
+
+### 🖥️ Development Server
+```bash
+./start-server.sh
+```
+Starts a local development server on port 8000 with Python 3.
+
+### 🎨 Theme Toggle
+```bash
+./toggle-theme.sh
+```
+Interactive script to switch between light and dark themes.
+
+### 🔍 Cleanup Verification
+```bash
+./check-cleanup.sh
+```
+Verifies that all template references have been removed and the site structure is correct.
+
+### 🧹 Final Cleanup
+```bash
+./cleanup-final.sh
+```
+Performs final cleanup and shows project statistics.
 
 ## 🔧 Customization
 
@@ -175,10 +213,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Original template inspiration from FreeHTML5.co
 - Bootstrap framework for responsive design
 - Font Awesome for icons
 - Unsplash for placeholder images
+- Original template concept for inspiration
 
 ## 📞 Support
 

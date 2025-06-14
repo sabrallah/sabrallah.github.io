@@ -228,3 +228,162 @@ select:focus {
   border-color: #28a745 !important;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
 }
+
+/* Light theme specific enhancements */
+.light-theme-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.light-theme-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Enhanced navigation for light theme */
+.fh5co-nav.light {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Improved section spacing for light theme */
+.fh5co-section {
+  padding: 5em 0;
+}
+
+/* Light theme gradients */
+.light-gradient-bg {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.light-accent-gradient {
+  background: linear-gradient(135deg, #ea272d 0%, #d41e23 100%);
+}
+
+/* Enhanced typography for light theme */
+.light-theme-title {
+  color: #333;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.light-theme-subtitle {
+  color: #666;
+  opacity: 0.9;
+}
+
+/* Light theme feature boxes */
+.feature-light {
+  background: #ffffff;
+  padding: 2.5em 2em;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.4s ease;
+}
+
+.feature-light:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: #ea272d;
+}
+
+/* Light theme testimonials */
+.testimonial-light {
+  background: #f8f9fa;
+  border-left: 4px solid #ea272d;
+  padding: 2em;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Light theme form enhancements */
+.form-control-light {
+  background: #ffffff;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control-light:focus {
+  border-color: #ea272d;
+  box-shadow: 0 0 0 0.2rem rgba(234, 39, 45, 0.15);
+  background: #ffffff;
+}
+
+/* Light theme menu items */
+.menu-item-light {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.menu-item-light:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Light theme gallery items */
+.gallery-item-light {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.gallery-item-light:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Light theme counter section */
+.counter-light {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  padding: 3em 2em;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Accessibility improvements for light theme */
+.skip-link-light {
+  background: #333;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 0 0 8px 8px;
+}
+
+.skip-link-light:focus {
+  background: #ea272d;
+  color: #ffffff;
+}
+
+/* Light theme footer enhancements */
+.footer-light-section {
+  background: #333;
+  color: #ffffff;
+  border-top: 3px solid #ea272d;
+}
+
+/* Enhanced responsive design for light theme */
+@media (max-width: 768px) {
+  .light-theme-card {
+    margin-bottom: 2em;
+  }
+  
+  .feature-light {
+    padding: 2em 1.5em;
+  }
+  
+  .fh5co-section {
+    padding: 3em 0;
+  }
+}
