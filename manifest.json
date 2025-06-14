@@ -1,0 +1,24 @@
+{
+  "name": "Tasty Restaurant",
+  "short_name": "Tasty",
+  "description": "Experience exceptional dining at Tasty Restaurant. Fresh ingredients, authentic flavors, and warm hospitality in Brooklyn.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ea272d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["food", "restaurant", "dining"],
+  "lang": "en-US"
+}

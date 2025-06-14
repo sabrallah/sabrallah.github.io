@@ -3,11 +3,17 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Tasty Restaurant &mdash; Authentic Cuisine & Fine Dining Experience</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="freehtml5.co" />
+	<meta name="description" content="Experience exceptional dining at Tasty Restaurant. Fresh ingredients, authentic flavors, and warm hospitality in the heart of Brooklyn. Reserve your table today!" />
+	<meta name="keywords" content="restaurant, fine dining, Brooklyn, authentic cuisine, fresh ingredients, reservation, food, dining experience, gourmet" />
+	<meta name="author" content="Tasty Restaurant" />
+	<meta name="robots" content="index, follow" />
+	<meta name="theme-color" content="#ea272d" />
+	
+	<!-- PWA Manifest -->
+	<link rel="manifest" href="manifest.json">
+	<link rel="apple-touch-icon" href="images/hero_1.jpeg">
 
 	<!-- 
 	//////////////////////////////////////////////////////
@@ -24,15 +30,17 @@
 	 -->
 
   	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+	<meta property="og:title" content="Tasty Restaurant - Authentic Cuisine & Fine Dining"/>
+	<meta property="og:image" content="https://sabrallah.github.io/images/hero_1.jpeg"/>
+	<meta property="og:url" content="https://sabrallah.github.io"/>
+	<meta property="og:site_name" content="Tasty Restaurant"/>
+	<meta property="og:description" content="Experience exceptional dining at Tasty Restaurant. Fresh ingredients, authentic flavors, and warm hospitality in Brooklyn."/>
+	<meta property="og:type" content="restaurant" />
+	<meta name="twitter:title" content="Tasty Restaurant - Authentic Cuisine & Fine Dining" />
+	<meta name="twitter:image" content="https://sabrallah.github.io/images/hero_1.jpeg" />
+	<meta name="twitter:url" content="https://sabrallah.github.io" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description" content="Experience exceptional dining at Tasty Restaurant. Fresh ingredients, authentic flavors, and warm hospitality in Brooklyn." />
 
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
@@ -48,6 +56,8 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Custom improvements -->
+	<link rel="stylesheet" href="css/custom-improvements.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -59,31 +69,34 @@
 	</head>
 	<body>
 		
+	<!-- Skip to main content for accessibility -->
+	<a href="#fh5co-about" class="skip-link">Skip to main content</a>
+	
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
+	<nav class="fh5co-nav" role="navigation" aria-label="Main navigation">
 		<!-- <div class="top-menu"> -->
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">Tasty<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.html" aria-label="Tasty Restaurant Home">Tasty<span>.</span></a></div>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
-						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="menu.html">Menu</a></li>
-							<li class="has-dropdown">
-								<a href="gallery.html">Gallery</a>
-								<ul class="dropdown">
-									<li><a href="#">Events</a></li>
-									<li><a href="#">Food</a></li>
-									<li><a href="#">Coffees</a></li>
+						<ul role="menubar">
+							<li class="active" role="none"><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+							<li role="none"><a href="menu.html" role="menuitem">Menu</a></li>
+							<li class="has-dropdown" role="none">
+								<a href="gallery.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Gallery</a>
+								<ul class="dropdown" role="menu" aria-label="Gallery submenu">
+									<li role="none"><a href="gallery.html#events" role="menuitem">Events</a></li>
+									<li role="none"><a href="gallery.html#food" role="menuitem">Food</a></li>
+									<li role="none"><a href="gallery.html#drinks" role="menuitem">Beverages</a></li>
 								</ul>
 							</li>
-							<li><a href="reservation.html">Reservation</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li role="none"><a href="reservation.html" role="menuitem">Reservation</a></li>
+							<li role="none"><a href="about.html" role="menuitem">About</a></li>
+							<li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -92,16 +105,19 @@
 		<!-- </div> -->
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5" aria-label="Restaurant hero section">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>The Best Coffee <em>&amp;</em> Restaurant <em>in</em> Brooklyn</h1>
-							<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-							
+							<h1>Authentic Flavors <em>&amp;</em> Fine Dining <em>in</em> Brooklyn</h1>
+							<h2>Where every meal tells a story of passion, tradition, and culinary excellence</h2>
+							<div class="hero-buttons" style="margin-top: 2em;">
+								<a href="menu.html" class="btn btn-primary btn-lg" style="margin-right: 15px;" aria-label="View our menu">View Menu</a>
+								<a href="reservation.html" class="btn btn-outline btn-lg" aria-label="Make a reservation">Reserve Table</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -109,18 +125,19 @@
 		</div>
 	</header>
 
-	<div id="fh5co-about" class="fh5co-section">
+	<div id="fh5co-about" class="fh5co-section" role="main">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
-					<img src="images/hero_1.jpeg" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+					<img src="images/hero_1.jpeg" alt="Interior view of Tasty Restaurant showing elegant dining atmosphere" loading="lazy">
 				</div>
 				<div class="col-md-5 col-md-push-1 animate-box">
 					<div class="section-heading">
-						<h2>The Restaurant</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque quisquam at deserunt ab praesentium architecto tempore saepe animi voluptatem molestias, eveniet aut laudantium alias, laboriosam excepturi, et numquam? Atque tempore iure tenetur perspiciatis, aliquam, asperiores aut odio accusamus, unde libero dignissimos quod aliquid neque et illo vero nesciunt. Sunt!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam iure reprehenderit nihil nobis laboriosam beatae assumenda tempore, magni ducimus abentey.</p>
-						<p><a href="#" class="btn btn-primary btn-outline">Our History</a></p>
+						<h2>Our Story</h2>
+						<p>Since 2010, Tasty Restaurant has been Brooklyn's premier destination for authentic cuisine crafted with passion and dedication. We believe that great food brings people together, creating memories that last a lifetime.</p>
+						<p>Our talented chefs combine traditional techniques with modern innovation, using only the freshest locally-sourced ingredients to create dishes that celebrate flavor, texture, and artistry.</p>
+						<p>From intimate dinners for two to special celebrations with family and friends, we provide an exceptional dining experience in a warm, welcoming atmosphere.</p>
+						<p><a href="about.html" class="btn btn-primary btn-outline" aria-label="Learn more about our history">Our History</a></p>
 					</div>
 				</div>
 			</div>
@@ -131,45 +148,45 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Today's Menu</h2>
+					<h2>Featured Specialties</h2>
 					<div class="row">
 						<div class="col-md-6">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+							<p>Discover our chef's carefully curated selection of signature dishes, each prepared with premium ingredients and innovative techniques that showcase the best of contemporary cuisine.</p>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 					<div class="fh5co-item">
-						<img src="images/gallery_9.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
-						<h3>Bake Potato Pizza</h3>
-						<span class="fh5co-price">$20<sup>.50</sup></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+						<img src="images/gallery_9.jpeg" class="img-responsive" alt="Artisan wood-fired pizza with fresh basil and mozzarella" loading="lazy">
+						<h3>Artisan Wood-Fired Pizza</h3>
+						<span class="fh5co-price">$24<sup>.50</sup></span>
+						<p>Hand-tossed dough topped with San Marzano tomatoes, fresh mozzarella, and basil, baked to perfection in our traditional wood-fired oven.</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 					<div class="fh5co-item margin_top">
-						<img src="images/gallery_8.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
-						<h3>Salted Fried Chicken</h3>
-						<span class="fh5co-price">$19<sup>.00</sup></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+						<img src="images/gallery_8.jpeg" class="img-responsive" alt="Herb-crusted free-range chicken with seasonal vegetables" loading="lazy">
+						<h3>Herb-Crusted Free-Range Chicken</h3>
+						<span class="fh5co-price">$28<sup>.00</sup></span>
+						<p>Succulent free-range chicken breast with a aromatic herb crust, served with roasted seasonal vegetables and rosemary jus.</p>
 					</div>
 				</div>
 				<div class="clearfix visible-sm-block visible-xs-block"></div>
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 					<div class="fh5co-item">
-						<img src="images/gallery_7.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
-						<h3>Italian Sauce Mushroom</h3>
-						<span class="fh5co-price">$17<sup>.99</sup></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+						<img src="images/gallery_7.jpeg" class="img-responsive" alt="Wild mushroom risotto with truffle oil and parmesan" loading="lazy">
+						<h3>Wild Mushroom Risotto</h3>
+						<span class="fh5co-price">$26<sup>.99</sup></span>
+						<p>Creamy Arborio rice slow-cooked with a medley of wild mushrooms, finished with truffle oil and aged Parmigiano-Reggiano.</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 					<div class="fh5co-item margin_top">
-						<img src="images/gallery_6.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
-						<h3>Fried Potato w/ Garlic</h3>
-						<span class="fh5co-price">$22<sup>.50</sup></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+						<img src="images/gallery_6.jpeg" class="img-responsive" alt="Pan-seared salmon with garlic roasted potatoes" loading="lazy">
+						<h3>Pan-Seared Atlantic Salmon</h3>
+						<span class="fh5co-price">$32<sup>.50</sup></span>
+						<p>Fresh Atlantic salmon fillet pan-seared to perfection, accompanied by garlic roasted fingerling potatoes and lemon butter sauce.</p>
 					</div>
 				</div>
 			</div>
@@ -180,21 +197,21 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Testimony</h2>
+					<h2>What Our Guests Say</h2>
 					<div class="row">
 						<div class="col-md-6">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis.</p>
+							<p>We're honored to serve our community and thrilled when guests share their experiences. Here's what some of our valued patrons have to say about their dining experience at Tasty Restaurant.</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-5 animate-box img-to-responsive animate-box" data-animate-effect="fadeInLeft">
-						<img src="images/person_1.jpg" alt="">
+						<img src="images/person_1.jpg" alt="Happy customer enjoying dinner at Tasty Restaurant" loading="lazy">
 				</div>
 				<div class="col-md-7 animate-box" data-animate-effect="fadeInRight">
 					<blockquote>
-						<p> &ldquo; Quantum ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam. &rdquo;</p>
-						<p class="author"><cite>&mdash; Jane Smith</cite></p>
+						<p> &ldquo; Outstanding food and exceptional service! The wood-fired pizza was absolutely divine, and the atmosphere was perfect for our anniversary dinner. The staff went above and beyond to make our evening special. We'll definitely be returning! &rdquo;</p>
+						<p class="author"><cite>&mdash; Sarah & Michael Chen</cite></p>
 					</blockquote>
 				</div>
 			</div>
@@ -206,56 +223,56 @@
 			<div class="row">
 				<div class="col-md-6 animate-box">
 					<div class="fh5co-heading">
-						<h2>Our Best <em>&amp;</em> Unique Menu</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis!</p>
+						<h2>Our Signature <em>&amp;</em> Seasonal Menu</h2>
+						<p>Experience culinary artistry with our rotating seasonal menu, featuring locally-sourced ingredients and innovative preparations that celebrate the flavors of each season.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-md-push-1 animate-box">
 					<aside id="fh5co-slider-wrwap">
 					<div class="flexslider">
 						<ul class="slides">
-					   	<li style="background-image: url(images/gallery_7.jpeg);">
+					   	<li style="background-image: url(images/gallery_7.jpeg);" aria-label="Signature crab curry dish">
 					   		<div class="overlay-gradient"></div>
 					   		<div class="container-fluid">
 					   			<div class="row">
 						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
 						   				<div class="slider-text-inner">
 						   					<div class="desc">
-													<h2>Crab <em>with</em> Curry Sources</h2>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt eveniet quae, numquam magnam doloribus eligendi ratione rem, consequatur quos natus voluptates est totam magni! Nobis a temporibus, ipsum repudiandae dolorum.</p>
-													<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+													<h2>Signature Crab <em>with</em> Curry Sauce</h2>
+													<p>Fresh Dungeness crab delicately prepared with our house-made curry sauce, infused with coconut milk, lemongrass, and aromatic spices. A perfect fusion of coastal and Asian flavors.</p>
+													<p><a href="menu.html" class="btn btn-primary btn-outline" aria-label="View full menu">View Menu</a></p>
 						   					</div>
 						   				</div>
 						   			</div>
 						   		</div>
 					   		</div>
 					   	</li>
-					   	<li style="background-image: url(images/gallery_6.jpeg);">
+					   	<li style="background-image: url(images/gallery_6.jpeg);" aria-label="Premium tuna and roast beef selection">
 					   		<div class="overlay-gradient"></div>
 					   		<div class="container-fluid">
 					   			<div class="row">
 						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
 						   				<div class="slider-text-inner">
 						   					<div class="desc">
-													<h2>Tuna <em>&amp;</em> Roast Beef</h2>
-													<p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
-													<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+													<h2>Seared Tuna <em>&amp;</em> Prime Beef</h2>
+													<p>Perfectly seared yellowfin tuna paired with tender prime roast beef, served with wasabi aioli and seasonal microgreens. A sophisticated combination of land and sea.</p>
+													<p><a href="menu.html" class="btn btn-primary btn-outline" aria-label="View full menu">View Menu</a></p>
 						   					</div>
 						   				</div>
 						   			</div>
 						   		</div>
 					   		</div>
 					   	</li>
-					   	<li style="background-image: url(images/gallery_5.jpeg);">
+					   	<li style="background-image: url(images/gallery_5.jpeg);" aria-label="Truffle egg with wild mushrooms">
 					   		<div class="overlay-gradient"></div>
 					   		<div class="container-fluid">
 					   			<div class="row">
 						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
 						   				<div class="slider-text-inner">
 						   					<div class="desc">
-													<h2>Egg <em>with</em> Mushroom</h2>
-													<p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
-													<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+													<h2>Truffle Egg <em>with</em> Wild Mushrooms</h2>
+													<p>Farm-fresh organic egg cooked to perfection with a medley of wild mushrooms and finished with shaved black truffle. An elegant start to any meal or perfect as a light lunch.</p>
+													<p><a href="menu.html" class="btn btn-primary btn-outline" aria-label="View full menu">View Menu</a></p>
 						   					</div>
 						   				</div>
 						   			</div>
@@ -274,52 +291,52 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Events</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
+					<h2>Special Events & News</h2>
+					<p>Stay updated with our latest culinary events, seasonal menu launches, and special dining experiences. From wine pairing dinners to cooking classes, there's always something exciting happening at Tasty Restaurant.</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/gallery_1.jpeg);"></a>
+						<a href="#" class="blog-bg" style="background-image: url(images/gallery_1.jpeg);" aria-label="Wine pairing dinner event"></a>
 						<div class="blog-text">
-							<span class="posted_on">Feb. 15th 2016</span>
-							<h3><a href="#">Photoshoot On The Street</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<span class="posted_on">March 15th 2025</span>
+							<h3><a href="#" aria-label="Read more about wine pairing dinner">Exclusive Wine Pairing Dinner</a></h3>
+							<p>Join us for an unforgettable evening featuring a five-course tasting menu paired with carefully selected wines from renowned vineyards.</p>
 							<ul class="stuff">
-								<li><i class="icon-heart2"></i>1.2K</li>
-								<li><i class="icon-eye2"></i>2K</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+								<li><i class="icon-heart2"></i>124</li>
+								<li><i class="icon-eye2"></i>2.1K</li>
+								<li><a href="#" aria-label="Read more about this event">Read More<i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div> 
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/gallery_2.jpeg);"></a>
+						<a href="#" class="blog-bg" style="background-image: url(images/gallery_2.jpeg);" aria-label="Spring menu launch"></a>
 						<div class="blog-text">
-							<span class="posted_on">Feb. 15th 2016</span>
-							<h3><a href="#">Surfing at Philippines</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<span class="posted_on">April 1st 2025</span>
+							<h3><a href="#" aria-label="Read more about spring menu">Spring Menu Launch</a></h3>
+							<p>Discover our new spring menu featuring fresh seasonal ingredients, vibrant flavors, and innovative dishes crafted by our executive chef.</p>
 							<ul class="stuff">
-								<li><i class="icon-heart2"></i>1.2K</li>
-								<li><i class="icon-eye2"></i>2K</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+								<li><i class="icon-heart2"></i>89</li>
+								<li><i class="icon-eye2"></i>1.8K</li>
+								<li><a href="#" aria-label="Read more about spring menu">Read More<i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div> 
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/gallery_3.jpeg);"></a>
+						<a href="#" class="blog-bg" style="background-image: url(images/gallery_3.jpeg);" aria-label="Cooking class announcement"></a>
 						<div class="blog-text">
-							<span class="posted_on">Feb. 15th 2016</span>
-							<h3><a href="#">Focus On Uderwater</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<span class="posted_on">April 20th 2025</span>
+							<h3><a href="#" aria-label="Read more about cooking classes">Hands-On Cooking Classes</a></h3>
+							<p>Learn from our master chefs in intimate cooking classes where you'll master the art of creating restaurant-quality dishes at home.</p>
 							<ul class="stuff">
-								<li><i class="icon-heart2"></i>1.2K</li>
-								<li><i class="icon-eye2"></i>2K</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+								<li><i class="icon-heart2"></i>156</li>
+								<li><i class="icon-eye2"></i>3.2K</li>
+								<li><a href="#" aria-label="Read more about cooking classes">Read More<i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div> 
 					</div>
@@ -333,9 +350,9 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Book a Table</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
-					<p><a href="reservation.html" class="btn btn-primary btn-outline">Book Now</a></p>
+					<h2>Reserve Your Table</h2>
+					<p>Ready for an exceptional dining experience? Book your table now and let us create an unforgettable evening for you and your loved ones. We look forward to serving you!</p>
+					<p><a href="reservation.html" class="btn btn-primary btn-outline btn-lg" aria-label="Make a reservation online">Reserve Now</a></p>
 				</div>
 			</div>
 		</div>
@@ -345,37 +362,38 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget">
-					<h4>Tasty</h4>
-					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+					<h4>Tasty Restaurant</h4>
+					<p>Where culinary passion meets exceptional hospitality. We're committed to providing an unforgettable dining experience with fresh, locally-sourced ingredients and innovative cuisine.</p>
 				</div>
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
-					<h4>Links</h4>
+					<h4>Quick Links</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Menu</a></li>
-						<li><a href="#">Gallery</a></li>
+						<li><a href="index.html" aria-label="Home page">Home</a></li>
+						<li><a href="about.html" aria-label="About us">About</a></li>
+						<li><a href="menu.html" aria-label="Our menu">Menu</a></li>
+						<li><a href="gallery.html" aria-label="Photo gallery">Gallery</a></li>
+						<li><a href="reservation.html" aria-label="Make reservation">Reservations</a></li>
 					</ul>
 				</div>
 
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
-					<h4>Categories</h4>
+					<h4>Services</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="#">Landing Page</a></li>
-						<li><a href="#">Real Estate</a></li>
-						<li><a href="#">Personal</a></li>
-						<li><a href="#">Business</a></li>
-						<li><a href="#">e-Commerce</a></li>
+						<li><a href="#" aria-label="Private dining">Private Dining</a></li>
+						<li><a href="#" aria-label="Catering services">Catering</a></li>
+						<li><a href="#" aria-label="Special events">Special Events</a></li>
+						<li><a href="#" aria-label="Cooking classes">Cooking Classes</a></li>
+						<li><a href="#" aria-label="Wine tastings">Wine Tastings</a></li>
 					</ul>
 				</div>
 
 				<div class="col-md-4 col-md-push-1 fh5co-widget">
 					<h4>Contact Information</h4>
 					<ul class="fh5co-footer-links">
-						<li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-						<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
-						<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-						<li><a href="http://https://freehtml5.co">freehtml5.co</a></li>
+						<li>123 Culinary Street, <br> Brooklyn Heights, NY 11201</li>
+						<li><a href="tel:+15551234567" aria-label="Call restaurant">+1 (555) 123-4567</a></li>
+						<li><a href="mailto:reservations@tastyrestaurant.com" aria-label="Email restaurant">reservations@tastyrestaurant.com</a></li>
+						<li><strong>Hours:</strong> Tue-Sun 5:00 PM - 10:00 PM</li>
 					</ul>
 				</div>
 
@@ -384,15 +402,15 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+						<small class="block">&copy; 2025 Tasty Restaurant. All Rights Reserved.</small> 
+						<small class="block">Crafted with passion for exceptional dining experiences</small>
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter2"></i></a></li>
-							<li><a href="#"><i class="icon-facebook2"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
+							<li><a href="#" aria-label="Follow us on Twitter"><i class="icon-twitter2"></i></a></li>
+							<li><a href="#" aria-label="Follow us on Facebook"><i class="icon-facebook2"></i></a></li>
+							<li><a href="#" aria-label="Follow us on Instagram"><i class="icon-linkedin2"></i></a></li>
+							<li><a href="#" aria-label="Follow us on Pinterest"><i class="icon-dribbble2"></i></a></li>
 						</ul>
 					</p>
 				</div>
@@ -420,6 +438,8 @@
 	<script src="js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- Custom enhancements -->
+	<script src="js/enhancements.js"></script>
 	
 
 	</body>

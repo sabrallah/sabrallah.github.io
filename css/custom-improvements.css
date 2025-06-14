@@ -1,0 +1,230 @@
+/* Custom Improvements for Tasty Restaurant */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better button hover effects */
+.btn-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(234, 39, 45, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(234, 39, 45, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Hero section improvements */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons .btn {
+    margin-bottom: 10px;
+    min-width: 200px;
+  }
+}
+
+/* Image loading optimization */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Improved card hover effects */
+.fh5co-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fh5co-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Better responsive text */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em !important;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 2em !important;
+  }
+  
+  .fh5co-heading p {
+    font-size: 16px;
+  }
+}
+
+/* Loading animation for better UX */
+.fh5co-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fh5co-loader::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 3px solid #333;
+  border-top: 3px solid #ea272d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Accessibility improvements */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #ea272d;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus indicators */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #ea272d;
+  outline-offset: 2px;
+}
+
+/* Better menu dropdown on mobile */
+@media (max-width: 768px) {
+  .has-dropdown .dropdown {
+    position: static;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .has-dropdown .dropdown li a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Performance: Optimize testimonial section */
+.fh5co-featured-testimony {
+  will-change: transform;
+}
+
+/* Better social icons */
+.fh5co-social-icons li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ea272d;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.fh5co-social-icons li a:hover {
+  background: white;
+  color: #ea272d;
+  transform: scale(1.1);
+}
+
+/* Improved form styling */
+.form-control:focus {
+  border-color: #ea272d;
+  box-shadow: 0 0 0 0.2rem rgba(234, 39, 45, 0.25);
+}
+
+/* Better table responsiveness */
+@media (max-width: 768px) {
+  .table-responsive {
+    border: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .fh5co-nav,
+  .fh5co-social-icons,
+  .btn {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Dark mode support (if user prefers) */
+@media (prefers-color-scheme: dark) {
+  /* Keep current dark theme as it's already dark */
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Enhanced error states */
+.error {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.success {
+  border-color: #28a745 !important;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+}
