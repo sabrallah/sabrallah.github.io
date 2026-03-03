@@ -398,6 +398,7 @@
 
         function exportToDocx() {
             const text = document.getElementById('documentOutput').textContent;
+            const docType = document.getElementById('docType').value;
             const position = document.getElementById('position').value.trim() || 'document';
             
             const children = [
@@ -420,11 +421,6 @@
                     spacing: { after: 400 },
                 }),
                 new docx.Paragraph({
-                    children: [new docx.TextRun({ text: "APPEL A CANDIDATURE", bold: true, size: 44, font: "Times New Roman" })],
-                    alignment: docx.AlignmentType.CENTER,
-                    spacing: { after: 400 },
-                }),
-                new docx.Paragraph({
                     children: [new docx.TextRun({ text: "CASA BAÏA", bold: true, size: 36, font: "Times New Roman", color: "000080" })],
                     alignment: docx.AlignmentType.CENTER,
                     spacing: { after: 100 },
@@ -437,58 +433,70 @@
             ];
 
             const fullText = text;
-            const sectionNames = ['MISSIONS DU POSTE', 'QUALITÉS PERSONNELLES', 'COMPÉTENCES TECHNIQUES', 'FORMATION ET DIPLÔMES', 'EXPÉRIENCE'];
             
-            let sectionsData = [];
-            
-            for (let i = 0; i < sectionNames.length; i++) {
-                const currentSection = sectionNames[i];
-                const nextSection = sectionNames[i + 1];
+            if (docType === 'appel_candidature') {
+                const sectionNames = ['MISSIONS DU POSTE', 'QUALITÉS PERSONNELLES', 'COMPÉTENCES TECHNIQUES', 'FORMATION ET DIPLÔMES', 'EXPÉRIENCE'];
+                let sectionsData = [];
                 
-                let startIdx = fullText.indexOf(currentSection);
-                if (startIdx === -1) {
-                    startIdx = fullText.toUpperCase().indexOf(currentSection);
-                }
-                
-                if (startIdx !== -1) {
-                    let endIdx = nextSection ? fullText.toUpperCase().indexOf(nextSection) : fullText.length;
-                    if (endIdx === -1) endIdx = fullText.length;
+                for (let i = 0; i < sectionNames.length; i++) {
+                    const currentSection = sectionNames[i];
+                    const nextSection = sectionNames[i + 1];
                     
-                    const sectionContent = fullText.substring(startIdx, endIdx).trim();
-                    const contentLines = sectionContent.split('\n').slice(1).map(l => l.trim()).filter(l => l);
-                    sectionsData.push({ title: currentSection, content: contentLines });
-                }
-            }
-
-            for (const section of sectionsData) {
-                children.push(
-                    new docx.Paragraph({
-                        children: [new docx.TextRun({ text: section.title, bold: true, size: 26, font: "Times New Roman", color: "000080" })],
-                        spacing: { before: 400, after: 200 },
-                    })
-                );
-                
-                children.push(
-                    new docx.Paragraph({
-                        border: { bottom: { color: "000080", space: 2, value: "single", size: 12 } },
-                        spacing: { after: 300 },
-                    })
-                );
-
-                for (const line of section.content) {
-                    const cleanLine = line.replace(/^[•\-\*]\s*/, '').trim();
-                    if (cleanLine) {
-                        children.push(
-                            new docx.Paragraph({
-                                children: [
-                                    new docx.TextRun({ text: "•", size: 22, font: "Times New Roman", color: "000080" }),
-                                    new docx.TextRun({ text: "  " + cleanLine, size: 22, font: "Times New Roman" }),
-                                ],
-                                spacing: { after: 120 },
-                                indent: { left: 720 },
-                            })
-                        );
+                    let startIdx = fullText.indexOf(currentSection);
+                    if (startIdx === -1) {
+                        startIdx = fullText.toUpperCase().indexOf(currentSection);
                     }
+                    
+                    if (startIdx !== -1) {
+                        let endIdx = nextSection ? fullText.toUpperCase().indexOf(nextSection) : fullText.length;
+                        if (endIdx === -1) endIdx = fullText.length;
+                        
+                        const sectionContent = fullText.substring(startIdx, endIdx).trim();
+                        const contentLines = sectionContent.split('\n').slice(1).map(l => l.trim()).filter(l => l);
+                        sectionsData.push({ title: currentSection, content: contentLines });
+                    }
+                }
+
+                for (const section of sectionsData) {
+                    children.push(
+                        new docx.Paragraph({
+                            children: [new docx.TextRun({ text: section.title, bold: true, size: 26, font: "Times New Roman", color: "000080" })],
+                            spacing: { before: 400, after: 200 },
+                        })
+                    );
+                    
+                    children.push(
+                        new docx.Paragraph({
+                            border: { bottom: { color: "000080", space: 2, value: "single", size: 12 } },
+                            spacing: { after: 300 },
+                        })
+                    );
+
+                    for (const line of section.content) {
+                        const cleanLine = line.replace(/^[•\-\*]\s*/, '').trim();
+                        if (cleanLine) {
+                            children.push(
+                                new docx.Paragraph({
+                                    children: [
+                                        new docx.TextRun({ text: "•", size: 22, font: "Times New Roman", color: "000080" }),
+                                        new docx.TextRun({ text: "  " + cleanLine, size: 22, font: "Times New Roman" }),
+                                    ],
+                                    spacing: { after: 120 },
+                                    indent: { left: 720 },
+                                })
+                            );
+                        }
+                    }
+                }
+            } else {
+                const lines = fullText.split('\n').filter(l => l.trim());
+                for (const line of lines) {
+                    children.push(
+                        new docx.Paragraph({
+                            children: [new docx.TextRun({ text: line.trim(), size: 22, font: "Times New Roman" })],
+                            spacing: { after: 120 },
+                        })
+                    );
                 }
             }
 
@@ -509,8 +517,12 @@
                 }],
             });
 
+            const fileName = docType === 'decision_conge' ? 'Decision_Conge' : 
+                           docType === 'appel_candidature' ? `Appel_Candidature_${position.replace(/\s+/g, '_')}` :
+                           `${docType}_${position.replace(/\s+/g, '_')}`;
+            
             docx.Packer.toBlob(doc).then(blob => {
-                saveAs(blob, `Appel_Candidature_${position.replace(/\s+/g, '_')}.docx`);
+                saveAs(blob, `${fileName}.docx`);
             });
         }
 
