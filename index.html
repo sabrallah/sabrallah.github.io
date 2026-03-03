@@ -239,6 +239,7 @@
                     <option value="evaluation_annuelle">Evaluation annuelle</option>
                     <option value="licenciement">Lettre de licenciement</option>
                     <option value="demission">Lettre de demission</option>
+                    <option value="decision_conge">Décision de congé</option>
                     <option value="autre">Autre document...</option>
                 </select>
             </div>
@@ -251,6 +252,11 @@
             <div class="form-group">
                 <label for="position">Poste / Fonction</label>
                 <input type="text" id="position" placeholder="Ex: Développeur Web, Chef de projet..." />
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" />
             </div>
 
             <div class="form-group">
@@ -295,6 +301,7 @@
             evaluation_annuelle: "Rédigez un formulaire d'évaluation annuelle pour le poste de {position} chez {company}.",
             licenciement: "Rédigez une lettre de licenciement pour un employé au poste de {position} chez {company}.",
             demission: "Rédigez une lettre de démission pour un employé au poste de {position} chez {company}.",
+            decision_conge: "Rédigez une décision de congé professionnelle avec la structure suivante:\n\n[TITRE]: DECISION DE CONGE\nDATE: {date}\n\n[DEUXIÈME TITRE]: DIRECTION GÉNÉRALE DE CASABLANCA BAÏA\n\n[TROISIÈME TITRE]: Décide\n\nContenu: {details}\n\nLe document doit être en français, formel, avec en-tête officiel de l'entreprise {company}.",
             autre: "Rédigez un document RH professionnel pour {position} chez {company}. Contexte: {details}"
         };
 
@@ -305,6 +312,8 @@
             const docType = document.getElementById('docType').value;
             const company = document.getElementById('companyName').value.trim();
             const position = document.getElementById('position').value.trim();
+            const dateInput = document.getElementById('date').value;
+            const date = dateInput ? new Date(dateInput).toLocaleDateString('fr-FR') : '';
             const details = document.getElementById('details').value.trim();
 
             const errorEl = document.getElementById('error');
@@ -330,6 +339,7 @@
             let prompt = documentTemplates[docType]
                 .replace('{company}', 'CASA BAÏA')
                 .replace('{position}', position)
+                .replace('{date}', date)
                 .replace('{details}', details || 'aucune information supplémentaire');
 
             loadingEl.classList.add('show');
